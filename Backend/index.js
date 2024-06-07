@@ -1,24 +1,35 @@
-const express=require("express")
-const { Sequelize } = require('sequelize');
-const cors=require("cors");
-const app=express();
-require("dotenv").config()
-app.use(express.json());
+require("dotenv").config();
+const dotenvExpand = require("dotenv-expand");
+const express = require("express");
+const cors = require("cors");
+const { usersRouter } = require("./routes/users.routes")
+const { sequelize } = require("./utils/db.config");
+const bookrouter = require("./routes/books.route");
+const app = express();
+const port = 8080;
+
+dotenvExpand.expand(require("dotenv").config());
+
 app.use(cors());
-async function connectToDB(){
-    const sequelize = new Sequelize( process.env.DB_URL);
-      try {
-        await sequelize.authenticate();
-        console.log('Connection has been established successfully.');
-      } catch (error) {
-        console.error('Unable to connect to the database:', error);
-      }
-}
-app.get("/",(req,res)=>{
-res.send("server is running")
-})
-const port=8080;
-app.listen(port,async()=>{
-    await connectToDB()
-    console.log(`server is running at port at ${port}`);
-})
+
+app.use(express.json());
+
+app.get("/", (req, res) => {
+  try {
+    res.status(200).json({ message: "Server Home Page" });
+  } catch (error) {
+    res.status(400).json({ message: error });
+  }
+});
+
+app.use("/users", usersRouter);
+app.use('/api', bookrouter);
+app.all("*", (req, res) => {
+  res.status(404).json({ message: "404 Invalid Route" });
+});
+
+sequelize.sync();
+
+app.listen(port, () => {
+  console.log(`Server is running at port : ${port}`);
+});
