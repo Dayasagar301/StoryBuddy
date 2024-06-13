@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 });
 app.post('/generate-story', async (req, res) => {
   const { instructions } = req.body;
-  const apiKey = '382o0ac2c14btd9435906fb13df381eb';
+  const apiKey = process.env.API_KEY;
   const prompt = `User instructions: generate a story about ${instructions}`;
   const context = "You are a story expert and love to write stories. Your mission is to generate a story covering educational topics such as science, history, geography, and more. Incorporate moral lessons and character development. Encourage creative writing exercises and allow children to contribute to story creation. Provide bedtime story recommendations tailored to children's interests.";
   const apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${encodeURIComponent(prompt)}&context=${encodeURIComponent(context)}&key=${apiKey}`;
