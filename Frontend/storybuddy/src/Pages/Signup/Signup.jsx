@@ -50,7 +50,7 @@ function Signup() {
 
         };
 
-        fetch(`http://localhost:3000/auth/signup`, {
+        fetch(`https://storybuddy.onrender.com/auth/signup`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

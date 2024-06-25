@@ -1,2 +1,2 @@
-const Api = "https://story-buddy.onrender.com";
+const Api = "https://storybuddy.onrender.com";
 export default Api;

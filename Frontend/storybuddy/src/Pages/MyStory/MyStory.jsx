@@ -24,7 +24,7 @@ const MyStory = () => {
 
     const fetchStories = async () => {
         try {
-            const response = await axios.get('http://localhost:3000/story/userstory/', {
+            const response = await axios.get('https://storybuddy.onrender.com/story/userstory/', {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`,
                 },
