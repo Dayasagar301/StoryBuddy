@@ -268,7 +268,7 @@ const Home = () => {
     </Flex>
       <Box backgroundColor={'yellow'} display="flex" flexDir={["column", "column", "row"]} gap={5} p={8} >
                 <Box display="flex" alignItems="center" justifyContent="center" width={["100%", "100%", "50%"]} >
-                    <Image marginTop={20} src="https://t4.ftcdn.net/jpg/02/82/73/11/360_F_282731179_RVTrSvnT3ado62ynbrh2XIuZvYnxQNri.jpg" alt="StoryBuddy Image" />
+                    <Image marginTop={20}h={'60vh'} src="https://www.golocalprov.com/cache/images/remote/https_s3.amazonaws.com/media.golocalprov.com/KidsCount.png" alt="StoryBuddy Image" />
                 </Box>
 
                 <Box paddingTop={20} width={["100%", "100%", "50%"]}>
