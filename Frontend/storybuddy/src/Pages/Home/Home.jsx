@@ -6,7 +6,7 @@ import {
   AccordionPanel,
   Box,
   Button,
-  Center,
+ 
   Heading,
   Icon,
   Image,
@@ -17,7 +17,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { CheckCircleIcon } from "@chakra-ui/icons";
-import { FaBed, FaBookOpen, FaHome, FaMagic } from "react-icons/fa";
+import { FaBed, FaBookOpen, FaMagic } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Home = () => {

@@ -168,7 +168,7 @@ export default function Navbar() {
   );
 }
 
-const DesktopNav = ({ display, isLoggedIn }) => (
+const DesktopNav = ({ display }) => (
   <Stack direction={"row"} spacing={4} display={display}>
     {NAV_ITEMS.map((navItem) => (
       <Box key={navItem.label}>
@@ -179,11 +179,7 @@ const DesktopNav = ({ display, isLoggedIn }) => (
         </Popover>
       </Box>
     ))}
-    {isLoggedIn && (
-      <Box>
-        <NavLink href={"/profile"}>Profile</NavLink>
-      </Box>
-    )}
+    
   </Stack>
 );
 

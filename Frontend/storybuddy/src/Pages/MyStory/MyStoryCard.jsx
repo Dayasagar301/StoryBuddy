@@ -6,6 +6,7 @@ import {
     ModalBody, ModalFooter, Input, Textarea
 } from '@chakra-ui/react';
 import axios from 'axios';
+import { NavLink } from 'react-router-dom';
 
 const MyStoryCard = ({ story, onDelete, onUpdate }) => {
 
@@ -41,10 +42,11 @@ const MyStoryCard = ({ story, onDelete, onUpdate }) => {
                 <Text fontWeight="bold" mb={2}>{story.category}</Text>
                 <Text mb={4}>{story.story_description.slice(0, 100)}...</Text>
                 <Box display={"flex"} flexDirection={{ base: 'column', md: 'row' }} justifyContent="space-between">
-                    <Button mt={2} colorScheme="teal" mr={{ base: 0, md: 2 }} mb={{ base: 2, md: 0 }}>
+                    <NavLink to="/storydetails/:id">
+                    <Button mt={2} colorScheme="teal" mr={{ base: 0, md: 2 }} mb={{ base: 2, md: 0 }} >
                         Read Story
                     </Button>
-
+                    </NavLink>
                     <Button key={story.id} onClick={() => setIsUpdateModalOpen(true)} mt={2} colorScheme="blue" mr={{ base: 0, md: 2 }} mb={{ base: 2, md: 0 }}>
                         Update
                     </Button>
