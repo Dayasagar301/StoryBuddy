@@ -4,7 +4,7 @@
 // import './App.css'
 
 //import Login from "./Pages/Login/Login"
-import { BrowserRouter } from "react-router-dom"
+
 import AllRoutes from "./Routes/AllRoutes"
 import Navbar from "./Components/Navbar"
 import { Footer } from "./Components/footer/Footer"
@@ -21,11 +21,11 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+     
         <Navbar />
         <AllRoutes />
         <Footer />
-      </BrowserRouter>
+     
     </>
   )
 }
