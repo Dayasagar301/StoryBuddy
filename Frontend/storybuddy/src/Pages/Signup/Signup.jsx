@@ -83,7 +83,7 @@ function Signup() {
             <Stack
                 minH={"100vh"}
                 direction={{ base: "column", md: "row" }}
-                backgroundImage="url('https://t3.ftcdn.net/jpg/03/55/60/70/240_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg')"
+                backgroundImage="url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCb4XvETknScITog_Zfh-tDHkcNgd7l0rONmHmIWERSvtfxSo-xWlCRFnk9V72Sva5vsM&usqp=CAU')"
                 backgroundSize="cover"
                 backgroundPosition="center"
                 display="flex"
