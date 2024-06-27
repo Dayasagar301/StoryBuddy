@@ -178,19 +178,29 @@ const Story = () => {
     };
 
     return (
-        <Container centerContent p={4} minHeight={"600px"} maxWidth="800px">
+        <Container centerContent p={4} minHeight={"600px"} maxWidth="100%">
             <Box textAlign="center" width="100%">
                 <Heading mb={4}>Story Generator</Heading>
                 <form onSubmit={generateStory}>
-                    <VStack spacing={4} alignItems="center">
-                        <FormControl id="story-title" display="flex" alignItems="center">
-                            <FormLabel flex="1">Enter Your Story Title</FormLabel>
+                    <VStack spacing={2} alignItems="center">
+                        <FormControl
+                            id="story-title"
+                            display="flex"
+                            alignItems={{ base: "flex-start", md: "center" }}
+                            flexDirection={{ base: "column", md: "row" }}
+                            w="100%"
+                            mb={1}
+                        >
+                            <FormLabel gap={2} mb={0}>
+                                Enter Your Story Title
+                            </FormLabel>
                             <Input
                                 value={title}
                                 onChange={(e) => setTitle(e.target.value)}
                                 required
                                 placeholder="Write story title here..."
                                 flex="3"
+                                mb={0}
                             />
                             <Button
                                 type="submit"
@@ -199,7 +209,8 @@ const Story = () => {
                                 isLoading={isLoading}
                                 loadingText="Generating..."
                                 disabled={isLoading}
-                                ml={2}
+                                ml={{ md: 2 }}
+                                mt={{ base: 2, md: 0 }}
                             >
                                 {isLoading ? "Generating..." : "Generate Story"}
                             </Button>
@@ -231,9 +242,9 @@ const Story = () => {
                                 <Text mt={2} whiteSpace="pre-wrap">
                                     {renderHighlightedText()}
                                 </Text>
-                                <Flex mt={4}>
+                                <Flex mt={4} flexDirection={{ base: "column", md: "row" }}>
                                     <Spacer />
-                                    <Stack direction="row" spacing={4}>
+                                    <Stack direction={{ base: "column", md: "row" }} spacing={4} mt={{ base: 4, md: 0 }}>
                                         <Tooltip label={isSpeaking ? "Stop Speaking" : "Speak Story"}>
                                             <IconButton
                                                 icon={isSpeaking ? <FiVolumeX /> : <FiVolume2 />}
