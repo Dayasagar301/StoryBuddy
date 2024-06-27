@@ -42,7 +42,7 @@ const MyStoryCard = ({ story, onDelete, onUpdate }) => {
                 <Text fontWeight="bold" mb={2}>{story.category}</Text>
                 <Text mb={4}>{story.story_description.slice(0, 100)}...</Text>
                 <Box display={"flex"} flexDirection={{ base: 'column', md: 'row' }} justifyContent="space-between">
-                    <NavLink to="/storydetails/:id">
+                    <NavLink to={`/storydetails/${story.id}`}>
                     <Button mt={2} colorScheme="teal" mr={{ base: 0, md: 2 }} mb={{ base: 2, md: 0 }} >
                         Read Story
                     </Button>
