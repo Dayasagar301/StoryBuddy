@@ -41,7 +41,7 @@ const Home = () => {
                         paddingTop={20}
                         paddingBottom={3}
                     >
-                        Write a BOOK{" "}
+                        Welcome to StoryBuddy{" "}
                     </Text>
 
                     <List spacing={3} paddingBottom={7}>

@@ -178,7 +178,7 @@ const Story = () => {
     };
 
     return (
-        <Container centerContent p={4} minHeight={"600px"} maxWidth="100%">
+        <Container centerContent p={4} minHeight={"600px"} maxWidth="100%"  >
             <Box textAlign="center" width="100%">
                 <Heading mb={4}>Story Generator</Heading>
                 <form onSubmit={generateStory}>

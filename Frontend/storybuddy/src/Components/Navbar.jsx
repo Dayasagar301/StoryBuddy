@@ -147,7 +147,7 @@ export default function Navbar() {
                     fontSize={"sm"}
                     fontWeight={600}
                     color={"white"}
-                    bg={"cyan"}
+                    bg={"teal"}
                     href={"/signup"}
                     _hover={{
                       bg: "pink.300",
