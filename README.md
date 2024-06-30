@@ -11,7 +11,6 @@ Frontend | Backend | Fullstack
 ## Deployed App
 Frontend:https://story-buddy-ten.vercel.app/
 Backend:https://storybuddy.onrender.com/ 
-Database: Json
 
 ## Directory Structure
 ```
